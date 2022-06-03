@@ -1,18 +1,21 @@
-import {BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { Home } from "./pages/Home";
+import  Home  from "./pages/Home";
 import { NewRoom } from "./pages/NewRoom";
 
-
+//import './services/firebase'
 
 function App() {
+  
   return (
-    <BrowserRouter>
+    <Router>
+
       <Routes>
         <Route path="/" element={< Home /> } />
         <Route path="/rooms/newroom" element={<NewRoom />} />  
       </ Routes>
-    </BrowserRouter>
+
+    </Router>
   );
 }
 
